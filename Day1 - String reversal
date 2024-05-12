@@ -1,0 +1,20 @@
+// “Cat”, return “taC”
+// “The Daily Byte”, return "etyB yliaD ehT”
+// “civic”, return “civic”
+
+//using arrays
+
+function reverse(str){
+  return str.split('').reverse().join('')
+}
+
+//using for loop 
+
+function reverse(str){
+  let rev_str=''
+  for(let i =str.length-1; i>=0;i--){
+    rev_str += str[i]
+  }
+  return rev_str
+}
+console.log(reverse('Cat'))

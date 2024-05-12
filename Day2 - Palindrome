@@ -1,0 +1,26 @@
+// "level", return true
+// "algorithm", return false
+// "A man, a plan, a canal: Panama.", return true
+
+function palindrome(str){
+  str = str.replace(/[^A-Za-z0-9]/g,'').toLowerCase();
+  let left = 0;
+  let right = str.length-1
+  while(left< right){
+    if(str[left] != str[right]){
+      return false;
+    }
+    left++
+    right--
+  }
+  return true
+}
+
+//using inbuilt functions
+function palindrome(str){
+  str = str.replace(/[^A-Za-z0-9]/g,'').toLowerCase();
+  let rev = str.split('').reverse().join('')
+  return str === rev
+}
+
+console.log(palindrome("A man, a plan, a canal: Panama."))
